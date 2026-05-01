@@ -1,44 +1,93 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Tip calculator app</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | Tip calculator app</title>
+  </head>
+  <body>
+    <main>
+      <div class="name">
+        <p>SPLI</p>
+        <p>TTER</p>
+      </div>
 
-  Bill
+      <article class="split-card">
+        <section class="split-card__section split-card__section--bill">
+          <label for="bill" class="split-card__label">Bill</label>
+          <div class="split-card__input-group">
+            <span><img src="./images/icon-dollar.svg" alt="dollar" /></span
+            ><input
+              id="bill"
+              type="number"
+              class="split-card__input split-card__input--bill"
+              min="0"
+            />
+          </div>
 
-  Select Tip %
-  5%
-  10%
-  15%
-  25%
-  50%
-  Custom
+          <fieldset class="split-card__tip-group">
+            <legend class="split-card__label">Select Tip %</legend>
 
-  Number of People
+            <button
+              class="split-card__tip-button split-card__tip-button--active"
+              data-tip="5"
+            >
+              5%
+            </button>
+            <button class="split-card__tip-button" data-tip="10">10%</button>
+            <button class="split-card__tip-button" data-tip="15">15%</button>
+            <button class="split-card__tip-button" data-tip="25">25%</button>
+            <button class="split-card__tip-button" data-tip="50">50%</button>
+            <input
+              type="number"
+              class="split-card__input split-card__input--tip"
+              placeholder="Custom"
+              min="0"
+            />
+          </fieldset>
 
-  Tip Amount
-  / person
+          <label for="people" class="split-card__label">Number of People</label>
+          <div class="split-card__input-group">
+            <span><img src="./images/icon-person.svg" alt="person" /></span>
+            <input
+              id="people"
+              type="number"
+              class="split-card__input split-card__input--people"
+              min="1"
+              max="10"
+            />
+          </div>
+        </section>
 
-  Total
-  / person
+        <section class="split-card__section split-card__section--result">
+          <span class="split-card__label">Tip Amount</span>
+          <span class="split-card__per-person">/ person</span>
+          <span class="split-card__amount split-card__amount--tip">$4.27</span>
 
-  Reset
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+          <span class="split-card__label">Total</span>
+          <span class="split-card__per-person">/ person</span>
+          <span class="split-card__amount split-card__amount--total"
+            >$32.79</span
+          >
+
+          <button class="split-card__reset-button">Reset</button>
+        </section>
+      </article>
+    </main>
+
+    <footer>
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Farha Shaikh</a>.
+    </footer>
+  </body>
 </html>
