@@ -4,3 +4,45 @@
   box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
+:root {
+  --Green-900: #00494d;
+  --Green-700: #c5e4e7;
+  --Grey-500: #5e7a7d;
+  --Grey-400: #7f9c9f;
+  --Grey-200: #c5e4e7;
+  --Grey-50: #f4fafb;
+  --White: #ffffff;
+}
+
+/* body */
+
+body {
+  background-color: var(--Green-700);
+  font-family: "mono space", sans-serif;
+  font-weight: 700;
+}
+
+.name {
+  font-size: 1.5rem;
+  color: #406264;
+  margin: 4rem;
+  text-align: center;
+  letter-spacing: 7px;
+}
+
+.name__top {
+  letter-spacing: 9px;
+}
+
+/* split card */
+
+/* footer */
+
+footer {
+  position: absolute;
+  bottom: 0;
+}
