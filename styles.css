@@ -5,16 +5,18 @@
 }
 
 html {
-    height: 100%;
+  height: 100%;
 }
 
 :root {
   --Green-900: #00494d;
   --Green-700: #c5e4e7;
+  --Green-400: #26c0ab;
   --Grey-500: #5e7a7d;
   --Grey-400: #7f9c9f;
   --Grey-200: #c5e4e7;
-  --Grey-50: #f4fafb;
+  --Grey-50: #e6f1f2;
+  /* --Grey-50: #f4fafb; */
   --White: #ffffff;
 }
 
@@ -22,8 +24,14 @@ html {
 
 body {
   background-color: var(--Green-700);
-  font-family: "mono space", sans-serif;
+  font-family: "Space Mono", sans-serif;
   font-weight: 700;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 .name {
@@ -31,18 +39,116 @@ body {
   color: #406264;
   margin: 4rem;
   text-align: center;
-  letter-spacing: 7px;
-}
-
-.name__top {
   letter-spacing: 9px;
 }
 
 /* split card */
 
+.split-card {
+  background-color: var(--White);
+  border-radius: 20px 20px 0px 0px;
+  padding: 1.75rem;
+}
+
+.split-card__label {
+  color: var(--Grey-500);
+  display: block;
+  margin: 0rem 0rem 0.75rem 0rem;
+}
+
+.split-card__input-group {
+  margin: 0rem 0rem 1.75rem 0rem;
+  background-color: var(--Grey-50);
+  display: flex;
+  padding: 0.5rem;
+  border-radius: 5px;
+  align-items: center;
+}
+
+.split-card__svg {
+  margin: 0rem 0rem 0rem 0.5rem;
+}
+
+.split-card__input {
+  width: 100%;
+  background-color: var(--Grey-50);
+  color: var(--Green-900);
+  font-size: 1.5rem;
+  font-family: "Space Mono", serif;
+  font-weight: 700;
+  text-align: right;
+  outline: none;
+  padding: 0rem 0.5rem;
+}
+
+.split-card__input-group:focus-within,
+.split-card__input--tip:focus-within {
+  outline: 3px solid var(--Grey-500);
+}
+
+.split-card__input--tip {
+  width: 48%;
+  height: 52px;
+  max-height: 100%;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.split-card__input--tip::placeholder {
+  color: var(--Grey-500);
+  font-family: "Space Mono", sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  opacity: 1;
+  text-align: center;
+}
+
+.split-card__tip-group {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: auto;
+  margin: 0rem 0rem 1rem 0rem;
+}
+
+.split-card__tip-button {
+  display: block;
+  margin: 0rem 0rem 0.75rem 0rem;
+  padding: 0.5rem 0rem;
+  width: 48%;
+  font-size: 1.5rem;
+  font-family: "Space Mono", serif;
+  background-color: var(--Green-900);
+  color: var(--White);
+  border-radius: 5px;
+  font-weight: 700;
+}
+
+.split-card__tip-button:focus,
+.split-card__tip-button:focus-visible
+.split-card__tip-button:hover {
+  background-color: var(--Green-400);
+  color: var(--Green-900);
+}
+
 /* footer */
 
 footer {
-  position: absolute;
-  bottom: 0;
+  background-color: var(--White);
+  padding: 1.75rem 0.75rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--Green-900);
+}
+
+/* utilities */
+
+.no-border {
+  border: none;
 }

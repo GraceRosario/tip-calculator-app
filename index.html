@@ -32,31 +32,35 @@
         <section class="split-card__section split-card__section--bill">
           <label for="bill" class="split-card__label">Bill</label>
           <div class="split-card__input-group">
-            <span><img src="./images/icon-dollar.svg" alt="dollar" /></span
+            <span
+              ><img
+                src="./images/icon-dollar.svg"
+                alt="dollar"
+                class="split-card__svg" /></span
             ><input
               id="bill"
               type="number"
-              class="split-card__input split-card__input--bill"
+              class="split-card__input split-card__input--bill no-border"
               min="0"
             />
           </div>
 
-          <fieldset class="split-card__tip-group">
+          <fieldset class="split-card__tip-group no-border">
             <legend class="split-card__label">Select Tip %</legend>
 
             <button
-              class="split-card__tip-button split-card__tip-button--active"
+              class="split-card__tip-button no-border split-card__tip-button--active"
               data-tip="5"
             >
               5%
             </button>
-            <button class="split-card__tip-button" data-tip="10">10%</button>
-            <button class="split-card__tip-button" data-tip="15">15%</button>
-            <button class="split-card__tip-button" data-tip="25">25%</button>
-            <button class="split-card__tip-button" data-tip="50">50%</button>
+            <button class="split-card__tip-button no-border" data-tip="10">10%</button>
+            <button class="split-card__tip-button no-border" data-tip="15">15%</button>
+            <button class="split-card__tip-button no-border" data-tip="25">25%</button>
+            <button class="split-card__tip-button no-border" data-tip="50">50%</button>
             <input
               type="number"
-              class="split-card__input split-card__input--tip"
+              class="split-card__input split-card__input--tip no-border"
               placeholder="Custom"
               min="0"
             />
@@ -64,11 +68,16 @@
 
           <label for="people" class="split-card__label">Number of People</label>
           <div class="split-card__input-group">
-            <span><img src="./images/icon-person.svg" alt="person" /></span>
+            <span
+              ><img
+                src="./images/icon-person.svg"
+                alt="person"
+                class="split-card__svg"
+            /></span>
             <input
               id="people"
               type="number"
-              class="split-card__input split-card__input--people"
+              class="split-card__input split-card__input--people no-border
               min="1"
               max="10"
             />
