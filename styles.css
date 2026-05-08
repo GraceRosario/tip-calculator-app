@@ -64,6 +64,7 @@ main {
   padding: 0.5rem;
   border-radius: 5px;
   align-items: center;
+  border: 3px solid var(--Grey-50);
 }
 
 .split-card__svg {
@@ -88,6 +89,12 @@ main {
   outline-offset: 2px;
 }
 
+.split-card__input-group:hover,
+.split-card__input--tip:hover {
+  border-color: var(--Green-800);
+  cursor: pointer;
+}
+
 .split-card__input--tip {
   width: 48%;
   height: 52px;
@@ -97,6 +104,7 @@ main {
   align-items: center;
   justify-content: center;
   padding: 1rem;
+  border: 3px solid var(--Grey-50);
 }
 
 .split-card__input--tip::placeholder {
@@ -227,6 +235,9 @@ footer a {
 
 /* utilities */
 
-.no-border {
-  border: none;
+.transparent-border {
+  border: 3px solid transparent;
+}
+
+@media (min-width: 1000px) {
 }
