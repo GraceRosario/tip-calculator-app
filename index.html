@@ -54,10 +54,18 @@
             >
               5%
             </button>
-            <button class="split-card__tip-button no-border" data-tip="10">10%</button>
-            <button class="split-card__tip-button no-border" data-tip="15">15%</button>
-            <button class="split-card__tip-button no-border" data-tip="25">25%</button>
-            <button class="split-card__tip-button no-border" data-tip="50">50%</button>
+            <button class="split-card__tip-button no-border" data-tip="10">
+              10%
+            </button>
+            <button class="split-card__tip-button no-border" data-tip="15">
+              15%
+            </button>
+            <button class="split-card__tip-button no-border" data-tip="25">
+              25%
+            </button>
+            <button class="split-card__tip-button no-border" data-tip="50">
+              50%
+            </button>
             <input
               type="number"
               class="split-card__input split-card__input--tip no-border"
@@ -68,16 +76,17 @@
 
           <label for="people" class="split-card__label">Number of People</label>
           <div class="split-card__input-group">
-            <span
-              ><img
+            <span>
+              <img
                 src="./images/icon-person.svg"
                 alt="person"
                 class="split-card__svg"
-            /></span>
+              />
+            </span>
             <input
               id="people"
               type="number"
-              class="split-card__input split-card__input--people no-border
+              class="split-card__input split-card__input--people no-border"
               min="1"
               max="10"
             />
@@ -85,17 +94,33 @@
         </section>
 
         <section class="split-card__section split-card__section--result">
-          <span class="split-card__label">Tip Amount</span>
-          <span class="split-card__per-person">/ person</span>
-          <span class="split-card__amount split-card__amount--tip">$4.27</span>
+          <div class="split-card__label-and-amount">
+            <div>
+              <span class="split-card__label split-card__label--result"
+                >Tip Amount</span
+              >
+              <span class="split-card__per-person">/ person</span>
+            </div>
+            <span class="split-card__amount split-card__amount--tip">
+              $4.27
+            </span>
+          </div>
 
-          <span class="split-card__label">Total</span>
-          <span class="split-card__per-person">/ person</span>
-          <span class="split-card__amount split-card__amount--total"
-            >$32.79</span
-          >
+          <div class="split-card__label-and-amount">
+            <div>
+              <span class="split-card__label split-card__label--result"
+                >Total</span
+              >
+              <span class="split-card__per-person">/ person</span>
+            </div>
+            <span class="split-card__amount split-card__amount--total"
+              >$32.79</span
+            >
+          </div>
 
-          <button class="split-card__reset-button">Reset</button>
+          <button class="split-card__reset-button no-border" disabled>
+            Reset
+          </button>
         </section>
       </article>
     </main>
