@@ -10,6 +10,7 @@ html {
 
 :root {
   --Green-900: #00494d;
+  --Green-800: #62ccd1dd;
   --Green-700: #c5e4e7;
   --Green-400: #26c0ab;
   --Grey-500: #5e7a7d;
@@ -84,6 +85,7 @@ main {
 .split-card__input-group:focus-within,
 .split-card__input--tip:focus-within {
   outline: 3px solid var(--Grey-500);
+  outline-offset: 2px;
 }
 
 .split-card__input--tip {
@@ -126,11 +128,23 @@ main {
   color: var(--White);
   border-radius: 5px;
   font-weight: 700;
+  border: none;
+  cursor: pointer;
 }
 
-.split-card__tip-button:focus,
-.split-card__tip-button:focus-visible
+.split-card__tip-button:focus-visible {
+  background-color: var(--Green-400);
+  color: var(--Green-900);
+  outline: 3px solid var(--Grey-500);
+  outline-offset: 2px;
+}
+
 .split-card__tip-button:hover {
+  background-color: var(--Green-800);
+  color: var(--Green-900);
+}
+
+.split-card__tip-button--active {
   background-color: var(--Green-400);
   color: var(--Green-900);
 }
