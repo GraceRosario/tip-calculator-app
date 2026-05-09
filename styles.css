@@ -50,6 +50,15 @@ main {
   background-color: var(--White);
   border-radius: 20px 20px 0px 0px;
   padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+.split-card__section--bill {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
 }
 
 .split-card__label {
@@ -59,7 +68,7 @@ main {
 }
 
 .split-card__input-group {
-  margin: 0rem 0rem 1.75rem 0rem;
+  /* margin: 0rem 0rem 1.75rem 0rem; */
   background-color: var(--Grey-50);
   display: flex;
   padding: 0.5rem;
@@ -99,7 +108,7 @@ main {
 
 .split-card__input--tip {
   width: 48%;
-  height: 52px;
+  height: 57px;
   max-height: 100%;
   border-radius: 5px;
   display: flex;
@@ -124,7 +133,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-between;
   height: auto;
-  margin: 0rem 0rem 1rem 0rem;
+  /* margin: 0rem 0rem 1rem 0rem; */
 }
 
 .split-card__tip-button {
@@ -247,8 +256,62 @@ footer a {
 }
 
 .error-border {
-  border-color:  var(--Orange);
+  border-color: var(--Orange);
+}
+
+/* browser */
+
+.split-card__input[type="number"] {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.split-card__input[type="number"]::-webkit-inner-spin-button,
+.split-card__input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 
 @media (min-width: 1000px) {
+  /* split-card */
+
+  .split-card {
+    flex-direction: row;
+    width: 900px;
+    max-width: 100%;
+    height: auto;
+    align-self: center;
+    justify-self: center;
+    border-radius: 20px;
+    margin: 0rem 0rem 3rem 0rem;
+  }
+
+  .split-card__section {
+    width: 50%;
+  }
+
+  .split-card__section--bill {
+    height: 100%;
+  }
+
+  .split-card__tip-button,
+  .split-card__input--tip {
+    width: 30%;
+  }
+
+  .split-card__input--tip {
+    padding: 0.875rem;
+  }
+
+  .split-card__reset-button {
+    width: 90%;
+    align-self: center;
+    margin: auto 1rem 1rem 1rem;
+  }
+
+  /* footer */
+
+  footer {
+    background-color: var(--Green-700);
+  }
 }
