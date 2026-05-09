@@ -19,6 +19,7 @@ html {
   --Grey-50: #e6f1f2;
   /* --Grey-50: #f4fafb; */
   --White: #ffffff;
+  --Orange: #ff4500;
 }
 
 /* body */
@@ -91,7 +92,8 @@ main {
 
 .split-card__input-group:hover,
 .split-card__input--tip:hover {
-  border-color: var(--Green-800);
+  outline: 3px solid var(--Green-800);
+  outline-offset: 2px;
   cursor: pointer;
 }
 
@@ -237,6 +239,15 @@ footer a {
 
 .transparent-border {
   border: 3px solid transparent;
+}
+
+.active-outline {
+  outline: 3px solid var(--Green-800);
+  outline-offset: 2px;
+}
+
+.error-border {
+  border-color:  var(--Orange);
 }
 
 @media (min-width: 1000px) {
