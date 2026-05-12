@@ -18,6 +18,7 @@
       href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap"
       rel="stylesheet"
     />
+    <script src="script.js" defer></script>
 
     <title>Frontend Mentor | Tip calculator app</title>
   </head>
@@ -51,7 +52,7 @@
             <legend class="split-card__label">Select Tip %</legend>
 
             <button
-              class="split-card__tip-button transparent-border split-card__tip-button--active"
+              class="split-card__tip-button transparent-border"
               data-tip="5"
             >
               5%
@@ -89,10 +90,19 @@
           </fieldset>
 
           <div>
-            <label for="people" class="split-card__label"
-              >Number of People</label
+            <div class="split-card__label-and-error">
+              <label for="people" class="split-card__label">
+                Number of People
+              </label>
+              <span
+                class="split-card__error-message"
+                id="people-input-error"
+              ></span>
+            </div>
+
+            <div
+              class="split-card__input-group split-card__input-group--people"
             >
-            <div class="split-card__input-group">
               <span>
                 <img
                   src="./images/icon-person.svg"
@@ -100,12 +110,14 @@
                   class="split-card__svg"
                 />
               </span>
+
               <input
                 id="people"
                 type="number"
                 class="split-card__input split-card__input--people transparent-border"
                 min="1"
                 max="10"
+                aria-describedby="people-input-error"
               />
             </div>
           </div>

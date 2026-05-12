@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html {
@@ -63,7 +64,7 @@ main {
 
 .split-card__label {
   color: var(--Grey-500);
-  display: block;
+  display: inline-block;
   margin: 0rem 0rem 0.75rem 0rem;
 }
 
@@ -229,6 +230,15 @@ main {
   color: var(--Green-900);
   opacity: 0.5;
   cursor: not-allowed;
+}
+
+.split-card__label-and-error {
+  display: flex;
+  justify-content: space-between;
+}
+
+.split-card__error-message {
+  color: var(--Orange);
 }
 
 /* footer */
